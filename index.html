@@ -23,7 +23,7 @@
             <img src="./images/logo.png" alt="" width="125px" />
           </div>
           <nav>
-            <ul>
+            <ul id="menuItems">
               <li><a href="">Home</a></li>
               <li><a href="">Products</a></li>
               <li><a href="">About</a></li>
@@ -33,6 +33,11 @@
           </nav>
 
           <img src="./images/cart.png" alt="" width="30px" height="30px" />
+          <img
+            src="./images/menu.png"
+            class="menu-icon"
+            onclick="menutoggle()"
+          />
         </header>
 
         <section class="section-row">
@@ -347,9 +352,8 @@
             <h3>Download Our App</h3>
             <p>Download App For Android and Ios mobile Phones</p>
             <div class="app-logo">
-              <img src="./images/play-store.png" alt="">
-              <img src="./images/app-store.png" alt="">
-
+              <img src="./images/play-store.png" alt="" />
+              <img src="./images/app-store.png" alt="" />
             </div>
           </div>
 
@@ -381,9 +385,27 @@
             </ul>
           </div>
         </div>
-        <hr>
+        <hr />
         <p class="copyright">Copyright 2020 - Taiwo O.M</p>
       </div>
     </section>
+
+    <!-- Js for toggle -->
+    <script>
+      var menuItems = document.getElementById('menuItems');
+
+      menuItems.style.maxHeight = '0px';
+
+      function menutoggle() {
+        if(menuItems.style.maxHeight == '0px')
+        {
+          menuItems.style.maxHeight = '200px'
+        }
+        else 
+        {
+          menuItems.style.maxHeight = '0px'
+        }
+      }
+    </script>
   </body>
 </html>
